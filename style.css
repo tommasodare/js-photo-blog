@@ -18,9 +18,11 @@ main {
 
 .container-fluid {
     width: 70%;
+    justify-content: center;
+
 
     .row {
-        justify-content: space-around;
+        justify-content: center;
     }
 }
 
