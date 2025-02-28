@@ -8,11 +8,19 @@ header {
     font-family: Edu Tas Beginner, sans-serif;
     text-align: center;
     background-image: url(./asset/img/wall.png);
+
+    h1 {
+        font-size: 80px;
+        
+        @media screen and (max-width: 426px) {
+           font-size: 60px;
+        }
+    }
 }
 
 main {
-    height: 100vh;
-    overflow-y: auto;
+    /* height: 100vh;
+    overflow-y: auto; */
     background-image: url(./asset/img/cork.png);
 }
 
@@ -22,18 +30,39 @@ main {
 
 
     .row {
-        justify-content: center;
+        justify-content: space-between;
     }
 }
 
 .card {
+    width: 32%;
     position: relative;
+
+    @media screen and (max-width: 768px) {
+        width: 48%;
+    }
+
+    @media screen and (max-width: 426px) {
+        width: 98%;
+    }
 }
 
 .pin {
     position: absolute;
     top: -10px;
-    left: 45%;
+    left: 44%;
+
+    @media screen and (max-width: 768px) {
+        top: -10px;
+        left: 44%;
+        width: 30px;
+    }
+
+    @media screen and (max-width: 426px) {
+        top: -5px;
+        left: 46%;
+        width: 25px;
+    }
 }
 
 .image_box {
@@ -44,6 +73,10 @@ p.place {
     font-size: 25px;
     font-weight: bold;
     font-family: Edu Tas Beginner, sans-serif;
+
+    @media (min-width: 426px) and  (max-width:768px) {
+        font-size: 17px;
+    }
 }
 
 p.date {
