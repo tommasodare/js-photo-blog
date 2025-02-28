@@ -12,5 +12,34 @@ header {
 
 main {
     height: 100vh;
+    overflow-y: auto;
     background-image: url(./asset/img/cork.png);
+}
+
+.container-fluid {
+    width: 70%;
+
+    .row {
+        justify-content: space-between;
+    }
+}
+
+.image_box {
+    position: relative;
+}
+
+.pin {
+    position: absolute;
+}
+
+p.place {
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Edu Tas Beginner, sans-serif;
+}
+
+p.date {
+    font-size: 8px;
+    text-decoration: grey;
+    font-family: Sometype Mono, monospace;
 }
