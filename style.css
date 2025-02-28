@@ -20,26 +20,32 @@ main {
     width: 70%;
 
     .row {
-        justify-content: space-between;
+        justify-content: space-around;
     }
 }
 
-.image_box {
+.card {
     position: relative;
 }
 
 .pin {
     position: absolute;
+    top: -10px;
+    left: 45%;
+}
+
+.image_box {
+    margin-top: 15px;
 }
 
 p.place {
-    font-size: 12px;
+    font-size: 25px;
     font-weight: bold;
     font-family: Edu Tas Beginner, sans-serif;
 }
 
 p.date {
-    font-size: 8px;
+    font-size: 15px;
     text-decoration: grey;
     font-family: Sometype Mono, monospace;
 }
