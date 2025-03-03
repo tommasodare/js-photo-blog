@@ -2,7 +2,8 @@
 const rowEl = document.querySelector(".row")
 const overlayEl = document.querySelector(".overlay")
 const buttonEl = document.querySelector(".btn")
-
+const overlay_imageEl = document.querySelector(".overlay_image")
+console.log(overlay_imageEl);
 
 // Fetch API
 fetch("https://lanciweb.github.io/demo/api/pictures")
@@ -30,20 +31,7 @@ fetch("https://lanciweb.github.io/demo/api/pictures")
     const cardEl = document.querySelectorAll(".card")
     //console.log(cardEl);
     const imageEl = document.querySelectorAll(".image")
-    console.log(imageEl);
-    const overlay_imageEl = document.getElementById("overlay_image")
-    console.log(overlay_imageEl);
-
-
-    for (let index = 0; index < imageEl.length; index++) {
-        const thisImage = imageEl[index];
-        console.log(thisImage);
-
-        imageEl.value = thisImage.src  // do un valore a image.value associandolo all src della foto
-        console.log(imageEl.value);
-
-        overlay_imageEl.src = imageEl.value
-    }
+    //console.log(imageEl);
 
 
     
@@ -56,6 +44,7 @@ fetch("https://lanciweb.github.io/demo/api/pictures")
 
             overlayEl.classList.add("d-block") // posso sia usare classList per aggiungere una classe
             // style.display = "block" -> che modificare il css con style
+        
         }) 
     
         buttonEl.addEventListener("click", function() {
@@ -69,3 +58,20 @@ fetch("https://lanciweb.github.io/demo/api/pictures")
 .catch(error => {
     console.error(error)
 })
+
+
+/* for (let index = 0; index < data.length; index++) {
+    const thisImage = data[index].url;
+    console.log(thisImage);
+
+    overlay_imageEl.innerText = `<img class="overlay_image" src=${thisImage} alt=""></img>`
+    
+} */
+
+/* for (let index = 0; index < data.length; index++) {
+    const thisImage= data[index].url;
+    console.log(thisImage);
+        
+    overlay_imageEl.insertAdjacentElement("beforebegin",`<img src=${thisImage} alt=""></img>`)
+
+} */

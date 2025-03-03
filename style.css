@@ -71,6 +71,11 @@ main {
     width: 32%;
     position: relative;
 
+    :hover {
+
+        
+    }
+
     @media screen and (max-width: 768px) {
         width: 48%;
     }
@@ -96,10 +101,6 @@ main {
         left: 46.5%;
         width: 25px;
     }
-}
-
-.image_box {
-    margin-top: 15px;
 }
 
 p.place {
