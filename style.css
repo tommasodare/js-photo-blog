@@ -71,11 +71,6 @@ main {
     width: 32%;
     position: relative;
 
-    :hover {
-
-        
-    }
-
     @media screen and (max-width: 768px) {
         width: 48%;
     }
@@ -84,6 +79,11 @@ main {
         width: 98%;
     }
 }
+
+.card:hover {
+    transform: scale(1.1); 
+}
+
 
 .pin {
     position: absolute;

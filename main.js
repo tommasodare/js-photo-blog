@@ -34,16 +34,16 @@ fetch("https://lanciweb.github.io/demo/api/pictures")
     //console.log(imageEl);
 
 
-    
+    for (let index = 0; index < imageEl.length; index++) {
+        const thisImage = imageEl[index]; // ho creato una costante che contiene tutte le card ciclate
+        console.log(thisImage);
 
-    for (let index = 0; index < cardEl.length; index++) {
-        const thisCard = cardEl[index]; // ho creato una costante che contiene tutte le card ciclate
-        //console.log(thisCard);
-
-        thisCard.addEventListener("click", function() {
+        thisImage.addEventListener("click", function() {
 
             overlayEl.classList.add("d-block") // posso sia usare classList per aggiungere una classe
             // style.display = "block" -> che modificare il css con style
+
+            overlay_imageEl.src = thisImage.src
         
         }) 
     
