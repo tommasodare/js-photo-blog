@@ -28,7 +28,7 @@ fetch("https://lanciweb.github.io/demo/api/pictures")
         
     }
 
-    const cardEl = document.querySelectorAll(".card")
+    const cardEl = document.querySelector(".card")
     //console.log(cardEl);
     const imageEl = document.querySelectorAll(".image")
     //console.log(imageEl);
@@ -46,13 +46,12 @@ fetch("https://lanciweb.github.io/demo/api/pictures")
             overlay_imageEl.src = thisImage.src
         
         }) 
-    
-        buttonEl.addEventListener("click", function() {
-            overlayEl.classList.add("d-none")
-        })
     }
 
+    buttonEl.addEventListener("click", function() {
+        overlayEl.classList.remove("d-block")
     
+    })
 
 })
 .catch(error => {

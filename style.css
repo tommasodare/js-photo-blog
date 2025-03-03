@@ -39,13 +39,26 @@ main {
         align-items: center;
         justify-content: center;
 
+        /* @media screen and (max-width: 1440px) {
+            max-width: 50%;
+        }
+
+        @media screen and (max-width: 1024px) {
+            max-width: 50%;
+        } */
+
+        @media screen and (min-width: 768px) {
+            max-width: 50%;
+        }
+
         @media screen and (max-width: 426px) {
-            max-width: 100%;
+            max-width: 120%;
         }
     }
 
     img {
         width: 100%;
+        
     }
 
     .btn {
