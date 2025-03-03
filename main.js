@@ -1,5 +1,7 @@
 // Seleziono gli elementi della DOM
 const rowEl = document.querySelector(".row")
+const overlayEl = document.querySelector(".overlay")
+const buttonEl = document.querySelector(".btn")
 
 // Fetch API
 fetch("https://lanciweb.github.io/demo/api/pictures")
@@ -22,6 +24,19 @@ fetch("https://lanciweb.github.io/demo/api/pictures")
                     </div>
                 </div>`
     }
+
+    const cardEl = document.querySelector(".card")
+
+
+    cardEl.addEventListener("click", function() {
+        overlayEl.classList.add("d-block") // posso sia usare classList per aggiungere una classe
+        // style.display = "block" -> che modificare il css con style
+
+    }) 
+
+    buttonEl.addEventListener("click", function() {
+        overlayEl.classList.add("d-none")
+    })
 
 })
 .catch(error => {
