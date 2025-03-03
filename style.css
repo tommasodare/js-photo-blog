@@ -70,6 +70,7 @@ main {
 .card {
     width: 32%;
     position: relative;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0);
 
     @media screen and (max-width: 768px) {
         width: 48%;
@@ -81,7 +82,15 @@ main {
 }
 
 .card:hover {
-    transform: scale(1.1); 
+    transform: scale(1.1);
+    rotate: 10deg;
+    z-index: 1;
+    box-shadow: 4px 4px 5px rgb(0, 0, 0);
+    cursor: pointer;
+
+    img.pin {
+        display:none;
+    }
 }
 
 
