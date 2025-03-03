@@ -24,6 +24,30 @@ main {
     background-image: url(./asset/img/cork.png);
 }
 
+.overlay {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+
+    img {
+        max-width: 100%;
+    }
+
+    .btn {
+        color: white;
+        background-color: grey;
+        margin-bottom: 2rem;
+    }
+}
+
+
+
 .container-fluid {
     width: 70%;
     justify-content: center;
@@ -50,17 +74,17 @@ main {
 .pin {
     position: absolute;
     top: -10px;
-    left: 44%;
+    left: 45%;
 
     @media screen and (max-width: 768px) {
         top: -10px;
-        left: 44%;
-        width: 30px;
+        left: 46%;
+        width: 28px;
     }
 
     @media screen and (max-width: 426px) {
         top: -5px;
-        left: 46%;
+        left: 46.5%;
         width: 25px;
     }
 }
@@ -70,7 +94,7 @@ main {
 }
 
 p.place {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     font-family: Edu Tas Beginner, sans-serif;
 
@@ -80,7 +104,7 @@ p.place {
 }
 
 p.date {
-    font-size: 15px;
+    font-size: 12px;
     text-decoration: grey;
     font-family: Sometype Mono, monospace;
 }

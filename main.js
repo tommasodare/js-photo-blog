@@ -12,7 +12,7 @@ fetch("https://lanciweb.github.io/demo/api/pictures")
         console.log(thisElement);
 
         rowEl.innerHTML += `<div class="card pt-3 mb-4 bg-white">
-                    <img width="40px" class="pin" src="./asset/img/pin.svg" alt="Pin">
+                    <img width="30px" class="pin" src="./asset/img/pin.svg" alt="Pin">
                     <img class="image" width="100%"
                         src=${thisElement.url}
                         alt="Skate Park">
