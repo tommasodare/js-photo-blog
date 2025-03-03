@@ -2,13 +2,13 @@
 const rowEl = document.querySelector(".row")
 const overlayEl = document.querySelector(".overlay")
 const buttonEl = document.querySelector(".btn")
-const overlay_imageEl = document.querySelector(".overlay_image")
+
 
 // Fetch API
 fetch("https://lanciweb.github.io/demo/api/pictures")
 .then(response => response.json())
 .then(data => {
-    console.log(data);
+    //console.log(data);
 
     for (let index = 0; index < data.length; index++) {
         const thisElement = data[index];
@@ -29,6 +29,24 @@ fetch("https://lanciweb.github.io/demo/api/pictures")
 
     const cardEl = document.querySelectorAll(".card")
     //console.log(cardEl);
+    const imageEl = document.querySelectorAll(".image")
+    console.log(imageEl);
+    const overlay_imageEl = document.getElementById("overlay_image")
+    console.log(overlay_imageEl);
+
+
+    for (let index = 0; index < imageEl.length; index++) {
+        const thisImage = imageEl[index];
+        console.log(thisImage);
+
+        imageEl.value = thisImage.src  // do un valore a image.value associandolo all src della foto
+        console.log(imageEl.value);
+
+        overlay_imageEl.src = imageEl.value
+    }
+
+
+    
 
     for (let index = 0; index < cardEl.length; index++) {
         const thisCard = cardEl[index]; // ho creato una costante che contiene tutte le card ciclate
@@ -38,7 +56,6 @@ fetch("https://lanciweb.github.io/demo/api/pictures")
 
             overlayEl.classList.add("d-block") // posso sia usare classList per aggiungere una classe
             // style.display = "block" -> che modificare il css con style
-    
         }) 
     
         buttonEl.addEventListener("click", function() {
