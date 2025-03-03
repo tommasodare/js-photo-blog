@@ -2,6 +2,7 @@
 const rowEl = document.querySelector(".row")
 const overlayEl = document.querySelector(".overlay")
 const buttonEl = document.querySelector(".btn")
+const overlay_imageEl = document.querySelector(".overlay_image")
 
 // Fetch API
 fetch("https://lanciweb.github.io/demo/api/pictures")
@@ -11,7 +12,7 @@ fetch("https://lanciweb.github.io/demo/api/pictures")
 
     for (let index = 0; index < data.length; index++) {
         const thisElement = data[index];
-        console.log(thisElement);
+        //console.log(thisElement);
 
         rowEl.innerHTML += `<div class="card pt-3 mb-4 bg-white">
                     <img width="30px" class="pin" src="./asset/img/pin.svg" alt="Pin">
@@ -23,20 +24,29 @@ fetch("https://lanciweb.github.io/demo/api/pictures")
                         <p class="place mb-0">${thisElement.title.toUpperCase()}</p>
                     </div>
                 </div>`
+        
     }
 
-    const cardEl = document.querySelector(".card")
+    const cardEl = document.querySelectorAll(".card")
+    //console.log(cardEl);
 
+    for (let index = 0; index < cardEl.length; index++) {
+        const thisCard = cardEl[index]; // ho creato una costante che contiene tutte le card ciclate
+        //console.log(thisCard);
 
-    cardEl.addEventListener("click", function() {
-        overlayEl.classList.add("d-block") // posso sia usare classList per aggiungere una classe
-        // style.display = "block" -> che modificare il css con style
+        thisCard.addEventListener("click", function() {
 
-    }) 
+            overlayEl.classList.add("d-block") // posso sia usare classList per aggiungere una classe
+            // style.display = "block" -> che modificare il css con style
+    
+        }) 
+    
+        buttonEl.addEventListener("click", function() {
+            overlayEl.classList.add("d-none")
+        })
+    }
 
-    buttonEl.addEventListener("click", function() {
-        overlayEl.classList.add("d-none")
-    })
+    
 
 })
 .catch(error => {
