@@ -41,7 +41,6 @@ fetch("https://lanciweb.github.io/demo/api/pictures")
         thisImage.addEventListener("click", function() {
 
             overlayEl.classList.add("d-block") // posso sia usare classList per aggiungere una classe
-            // style.display = "block" -> che modificare il css con style
 
             overlay_imageEl.src = thisImage.src
         
@@ -50,27 +49,9 @@ fetch("https://lanciweb.github.io/demo/api/pictures")
 
     buttonEl.addEventListener("click", function() {
         overlayEl.classList.remove("d-block")
-    
     })
 
 })
 .catch(error => {
     console.error(error)
 })
-
-
-/* for (let index = 0; index < data.length; index++) {
-    const thisImage = data[index].url;
-    console.log(thisImage);
-
-    overlay_imageEl.innerText = `<img class="overlay_image" src=${thisImage} alt=""></img>`
-    
-} */
-
-/* for (let index = 0; index < data.length; index++) {
-    const thisImage= data[index].url;
-    console.log(thisImage);
-        
-    overlay_imageEl.insertAdjacentElement("beforebegin",`<img src=${thisImage} alt=""></img>`)
-
-} */
